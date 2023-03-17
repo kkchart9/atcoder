@@ -62,3 +62,44 @@ while que:
 # print(dist)
 print(dist[gx][gy])
 
+
+#
+# from collections import defaultdict
+# li = defaultdict(list)
+# n, m = map(int, input().split())
+#
+# for _ in range(m):
+#     a, b = map(int, input().split())
+#     a -= 1
+#     b -= 1
+#     li[a].append(b)
+#     li[b].append(a)
+#
+#
+# from collections import deque
+#
+# INF = 1 << 60
+# MOD = 10 ** 9 + 7
+# dist = [INF] * n
+# dp = [0] * n
+# dist[0] = 0
+# dp[0] = 1
+#
+# que = deque((0,))
+#
+# while que:
+#     now = que.popleft()
+#     curr_cost = dist[now]
+#     next_cost = curr_cost + 1
+#     for v in li[now]:
+#         if next_cost < dist[v]:
+#             que.append(v)
+#             dist[v] = next_cost
+#         if next_cost == dist[v]:
+#             dp[v] += dp[now]
+#             dp[v] %= MOD
+#         print(dp, v+1)
+#     print('----------------', que)
+#
+# print(que)
+

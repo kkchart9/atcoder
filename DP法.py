@@ -19,6 +19,7 @@ for i in range(3, N+1):
     cost1 = dp[i-1] + abs(h[i] - h[i-1])
     cost2 = dp[i-2] + abs(h[i] - h[i-2])
     dp[i] = min(cost1, cost2)
+    print(dp)
 
 
 print(dp[N])
